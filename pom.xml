@@ -40,7 +40,7 @@
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
                             <mainClass>
-                                com.ygalav.ftssearcher.Searcher
+                                com.ygalav.ftssearcher.Main
                             </mainClass>
                         </manifest>
                     </archive>
