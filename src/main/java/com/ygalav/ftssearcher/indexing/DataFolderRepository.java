@@ -15,7 +15,7 @@ public class DataFolderRepository extends Repository {
 
         File directory = new File(directoryPathStr);
         if (!directory.isDirectory()) {
-            throw new IllegalArgumentException("Phe path provided does not lead to the existing directory");
+            throw new IllegalArgumentException("The path provided does not lead to the existing directory");
         }
         File[] directoryFiles = directory.listFiles();
         if (directoryFiles == null) {
