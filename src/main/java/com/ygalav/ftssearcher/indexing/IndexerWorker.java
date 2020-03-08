@@ -1,6 +1,6 @@
 package com.ygalav.ftssearcher.indexing;
 
-import com.ygalav.ftssearcher.Chunk;
+import com.ygalav.ftssearcher.index.Chunk;
 
 /**
  * Concrete worker that is able to perform indexing of the source and produce the Chunk

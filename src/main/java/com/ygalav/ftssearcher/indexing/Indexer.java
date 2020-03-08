@@ -1,6 +1,6 @@
 package com.ygalav.ftssearcher.indexing;
 
-import com.ygalav.ftssearcher.Index;
+import com.ygalav.ftssearcher.index.Index;
 
 /**
  * Abstraction over indexing Algorythm
@@ -8,5 +8,5 @@ import com.ygalav.ftssearcher.Index;
  * strategies how to perform the indexing itself
  */
 public interface Indexer {
-    Index performIndexing(Repository repository);
+    Index performIndexing(Repository... repository);
 }
