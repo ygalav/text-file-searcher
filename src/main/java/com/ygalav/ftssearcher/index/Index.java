@@ -1,4 +1,4 @@
-package com.ygalav.ftssearcher;
+package com.ygalav.ftssearcher.index;
 
 /**
  * Represents the whole index of data indexed.
@@ -7,4 +7,5 @@ package com.ygalav.ftssearcher;
  */
 public interface Index {
     void appendChunk(Chunk chunk);
+    boolean contains(String sourceId);
 }

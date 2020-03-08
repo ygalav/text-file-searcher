@@ -1,6 +1,7 @@
 package com.ygalav.ftssearcher.indexing;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.Objects;
@@ -33,7 +34,13 @@ public class DataFolderRepository extends Repository {
 
     @Override
     public Source next() {
-        Source source = new LocalFileSource(directoryContents.next());
+        Source source;
+        File nextFile = directoryContents.next();
+        try {
+            source = new LocalFileSource(nextFile);
+        } catch (FileNotFoundException e) {
+            source = Source.EMPTY_SOURCE;
+        }
         return source;
     }
 }
