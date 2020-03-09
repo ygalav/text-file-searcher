@@ -24,7 +24,7 @@ public class DataFolderRepository extends Repository {
             return;
         }
 
-        directoryContents = Stream.of(directoryFiles).iterator();
+        directoryContents = Stream.of(directoryFiles).filter(file -> !file.isDirectory()).iterator();
     }
 
     @Override
