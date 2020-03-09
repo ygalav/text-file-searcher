@@ -7,5 +7,6 @@ Index which needs to be abstracted
 
 
 To run
+0. Use java 13
 1 Build jak with mvn clean package (or use the one i commit)
 2. Run via java -jar test-file-searcher-1.0-SNAPSHOT.jar
