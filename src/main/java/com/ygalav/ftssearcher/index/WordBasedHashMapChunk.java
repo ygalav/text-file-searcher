@@ -49,5 +49,10 @@ public class WordBasedHashMapChunk implements Chunk {
         Word word = new CaseInsensitiveWord(term);
         return indexMap.containsKey(word);
     }
+
+    @Override
+    public String getSourceId() {
+        return sourceId;
+    }
 }
 

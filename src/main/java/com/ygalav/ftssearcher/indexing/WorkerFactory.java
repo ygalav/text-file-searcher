@@ -6,8 +6,14 @@ package com.ygalav.ftssearcher.indexing;
  */
 public class WorkerFactory {
 
+    private final ChunkFactory chunkFactory;
+
+    public WorkerFactory(ChunkFactory chunkFactory) {
+        this.chunkFactory = chunkFactory;
+    }
+
     public IndexerWorker createWorker(Repository repository) {
-        return new DefaultIndexerWorker();
+        return new DefaultIndexerWorker(chunkFactory);
     }
 
 }

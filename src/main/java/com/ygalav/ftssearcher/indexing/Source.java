@@ -12,7 +12,8 @@ public abstract class Source implements Iterator<String> {
 
     public abstract String getId();
 
-    public static final Source EMPTY_SOURCE = new Source() {
+    public static class EmptySource extends Source {
+
         @Override
         public String getName() {
             return null;
@@ -32,5 +33,5 @@ public abstract class Source implements Iterator<String> {
         public String next() {
             return null;
         }
-    };
+    }
 }

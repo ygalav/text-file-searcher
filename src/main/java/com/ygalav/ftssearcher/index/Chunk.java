@@ -11,6 +11,6 @@ import java.util.Objects;
 public interface Chunk {
     void put(String str);
     Object getData();
-
     boolean contains(String string);
+    String getSourceId();
 }

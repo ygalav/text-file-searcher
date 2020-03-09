@@ -39,7 +39,7 @@ public class DataFolderRepository extends Repository {
         try {
             source = new LocalFileSource(nextFile);
         } catch (FileNotFoundException e) {
-            source = Source.EMPTY_SOURCE;
+            source = new Source.EmptySource();
         }
         return source;
     }
