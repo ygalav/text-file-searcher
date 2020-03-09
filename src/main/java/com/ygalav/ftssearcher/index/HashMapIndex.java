@@ -2,6 +2,7 @@ package com.ygalav.ftssearcher.index;
 
 import com.ygalav.ftssearcher.index.Chunk;
 import com.ygalav.ftssearcher.index.Index;
+import com.ygalav.ftssearcher.search.Document;
 
 import java.util.HashMap;
 import java.util.List;
@@ -19,5 +20,11 @@ public class HashMapIndex implements Index {
     @Override
     public boolean contains(String sourceId) {
         return indexMap.containsKey(sourceId);
+    }
+
+    //This method to be re-worked to return normal abstraction
+    @Override
+    public Map<String, Map<Word, Integer>> getIndexMap() {
+        return indexMap;
     }
 }
